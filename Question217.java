@@ -12,17 +12,18 @@ TestCases-
 
 
 */
+
+import java.util.*;
+
 public class Question217
 {
 	public static boolean containsDuplicate(int[] nums) 
 	{
-        String s = "";
-		for(int i =0;i<nums.length;i++)
+		HashSet set = new HashSet();
+		for(int val : nums)
 		{
-			if(s.contains(" "+nums[i]))
+			if(!set.add(val))
 				return true;
-			else
-				s=s+" "+nums[i];
 		}
 		return false;
     }
