@@ -12,10 +12,10 @@ public class Question349
 {
 	public static int[] intersection(int[] nums1, int[] nums2) 
 	{
-		Set<Integer> set1 = new HashSet<>();
+		List<Integer> set1 = new ArrayList<>();
 		for(int i : nums1)
 			set1.add(i);
-		Set<Integer> set2 = new HashSet<>();
+		List<Integer> set2 = new ArrayList<>();
 		for(int i : nums2)
 			set2.add(i);
 		set1.retainAll(set2);
@@ -29,7 +29,7 @@ public class Question349
 	
 	public static void main(String[] args)
 	{
-		int[] num1= {4,9,5};
+		int[] num1= {4,9,9,5};
 		int[] num2 = {9,4,9,8,4};
 		int[] result = intersection(num1,num2);
 		System.out.println(Arrays.toString(result));
